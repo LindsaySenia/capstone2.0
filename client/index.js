@@ -55,7 +55,7 @@ registerForm.addEventListener('submit', e => {
         email: email.value
     }
 
-    axios.post(`http://localhost:3141/register`, userObj )
+    axios.post(`/register`, userObj )
         .then(res => {
             console.log(res.data)
         
@@ -91,7 +91,7 @@ loginForm.addEventListener('submit', e => {
     let username = usernameInput.value;
     let password = passwordInput.value;
 
-    axios.get(`http://localhost:3141/login?username=${username}&password=${password}`)
+    axios.get(`/login?username=${username}&password=${password}`)
         .then(res => {
             console.log(res.data)
 
