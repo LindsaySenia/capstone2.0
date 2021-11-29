@@ -12,24 +12,24 @@ const ctrl = require('./controllers')
 app.use(cors());
 app.use(express.json());
 
-app.use(express.static("public"));
+app.use(express.static("client"));
 
-app.get("/styles", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/index.css"));
-});
-app.get("/js", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/index.js"));
-});
+// app.get("/styles", (req, res) => {
+//   res.sendFile(path.join(__dirname, "client/index.css"));
+// });
+// app.get("/js", (req, res) => {
+//   res.sendFile(path.join(__dirname, "client/index.js"));
+// });
 
 // app.get('/', function(req, res) {
 //     res.sendFile(path.join(__dirname, '../index.html'));
 // });
 
-// app.get('/', (req, res) => {
-//     res.sendFile('index.html');
-// });
+app.get('/', (req, res) => {
+    res.sendFile('client/index.html');
+});
 
-const port = process.env.PORT || 3141;
+const port = process.env.PORT || process.env.SERVER_PORT;
 // const port = process.env.PORT || process.env.SERVER_PORT;
 
 app.get('/login', ctrl.login);
