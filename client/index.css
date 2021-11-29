@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(214, 243, 237);
+}
+
+h1 {
+    color: rgb(2, 2, 75);
+    text-align: center;
+    padding: 3px;
+}
+
+.sorting-hat {
+    background-image: url('https://c.tenor.com/GAkOHYBXb0oAAAAC/sorting-hat-angry.gif');
+    height: 200px;
+    width: 500px;
+}

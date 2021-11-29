@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "house": "G",
+      "pet": "Owl",
+      "special": "JS"
+    },
+    {
+      "id": 2,
+      "house": "H",
+      "pet": "Rabbit",
+      "special": "QA"
+    },
+    {
+      "id": 2,
+      "house": "R",
+      "pet": "Frog",
+      "special": "Java"
+    },
+    {
+      "id": 4,
+      "house": "S",
+      "pet": "Snake",
+      "special": "Data"
+    },
+    {
+      "id": 5,
+      "house": "Gryffindor",
+      "pet": "Rat",
+      "special": "Quality Analysis"
+    },
+    {
+      "id": 6,
+      "house": "Slytherin",
+      "pet": "Cat",
+      "special": "JavaScript"
+    },
+    {
+      "id": 7,
+      "house": "Ravenclaw",
+      "pet": "Parrot",
+      "special": "Data Solutions"
+    },
+    {
+      "id": 8,
+      "house": "Hufflepuff",
+      "pet": "Puppy",
+      "special": "Java Java"
+    }
+  ]
