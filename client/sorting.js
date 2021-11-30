@@ -55,9 +55,7 @@ let results = document.getElementById('results-container');
 
 
 //number between 1 and 4
-let randomP = Math.floor(Math.random() * 8);
-let randomS = Math.floor(Math.random() * 8);
-let randomH = Math.floor(Math.random() * 8);
+
 
 
 
@@ -80,8 +78,12 @@ let randomH = Math.floor(Math.random() * 8);
 
 sortingBtn.addEventListener('click', e => {
     e.preventDefault();
-
+    let randomP = Math.floor(Math.random() * 8);
+    let randomS = Math.floor(Math.random() * 8);
+    let randomH = Math.floor(Math.random() * 8);
     
+
+
     let house = document.getElementById('house')
     let pet = document.getElementById('pet')
     let special = document.getElementById('special')
@@ -90,12 +92,19 @@ sortingBtn.addEventListener('click', e => {
     let randomPet = values[randomP].pet
     let randomSpecial = values[randomS].special
    
+    house.innerHTML = ''
+    pet.innerHTML = ''
+    special.innerHTML = ''
+
     house.append(`Your house is ${randomHouse}!`)
     pet.append(`Your pet is ${randomPet}!`)
     special.append(`Your specialization is ${randomSpecial}`)
 
-    return
+    // sortingBtn.addEventListener('click', e => {
+    //   alert('You can only get one result per ')
+    // })
 
     // results.textContent = `Your house is ${randomHouse}, your pet is ${randomPet} and your specialty is ${randomSpecial}!`
 
 })
+
