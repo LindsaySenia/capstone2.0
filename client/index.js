@@ -2,38 +2,12 @@ const loginForm = document.getElementById('login-form')
 const display = document.getElementById('display')
 const registerForm = document.getElementById('register-form')
 
-// registerForm.addEventListener('submit', e => {
-//     e.preventDefault();
-
-//     const firstInput = document.getElementById('first');
-//     const lastInput = document.getElementById('last');
-//     const emailInput = document.getElementById('email');
-//     const userInput = document.getElementById('user-register');
-//     const pwInput = document.getElementById('pw-register');
-
-//     let firstName = firstInput.value;
-//     let lastName = lastInput.value;
-//     let emailAdd = emailInput.value;
-//     let userReg = userInput.value;
-//     let pwReg = pwInput.value;
-
-//     axios.post(`http://localhost:3141/login`, body)
-// })
-
-// function createWelcome(obj) {
-//     let regMsg = document.createElement('h2');
-//     let link = document.createElement('p');
-//     regMsg.textContent = `Yo ${res.data.username}! You're registered! Please log in.`;
-//     link.innerHTML += `<a href="./index.html">Log In</a>`
-//     display.append(regMsg);
-//     display.append(link);
-// }
-
-
 
 function clearDisplay() {
     display.innerHTML = ''
 }
+
+// 
 
 registerForm.addEventListener('submit', e => {
     e.preventDefault()
@@ -45,7 +19,13 @@ registerForm.addEventListener('submit', e => {
     let username = document.getElementById('user-register');
     let password = document.getElementById('pw-register');
 
-
+    function resetRegForm() {
+            username.value = ''
+            password.value = ''
+            firstName.value = ''
+            lastName.value = ''
+            email.value = ''
+        }
 
     let userObj = {
         username: username.value,
@@ -66,14 +46,12 @@ registerForm.addEventListener('submit', e => {
             display.append(regMsg);
             display.append(link);
 
-            username.value = ''
-            password.value = ''
-            firstName.value = ''
-            lastName.value = ''
-            email.value = ''
+            resetRegForm()
+
     })
         .catch(err => {
-            console.log(userObj)
+            alert("Please make sure there are no blank fields. If there aren't, then this username is unavailable.")
+            resetRegForm()
         console.log(err.response.data)
     })
 
@@ -107,6 +85,9 @@ loginForm.addEventListener('submit', e => {
 
         })
         .catch(err => {
+            alert('Uh oh you got it wrong!')
+            usernameInput.value = ''
+            passwordInput.value = ''
             console.log(err.response.data)
         });
 

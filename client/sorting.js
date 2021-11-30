@@ -51,6 +51,7 @@ let values = [
   ]
 
 const sortingBtn = document.getElementById('hat');
+let results = document.getElementById('results-container');
 
 
 //number between 1 and 4
@@ -61,16 +62,40 @@ let randomH = Math.floor(Math.random() * 8);
 
 
 
-let randomHouse = values[randomH].house
-let randomPet = values[randomP].pet
-let randomSpecial = values[randomS].special
 
-console.log(`Your house is ${randomHouse}, your pet is ${randomPet} and your specialty is ${randomSpecial}!`)
+
+// function randomResults() {
+
+//   let randomHouse = values[randomH].house
+//   let randomPet = values[randomP].pet
+//   let randomSpecial = values[randomS].special
+
+//   console.log(`Your house is ${randomHouse}, your pet is ${randomPet} and your specialty is ${randomSpecial}!`)
+
+// }
+
+
 
 
 
 sortingBtn.addEventListener('click', e => {
     e.preventDefault();
 
-    console.log('sorting away!')
+    
+    let house = document.getElementById('house')
+    let pet = document.getElementById('pet')
+    let special = document.getElementById('special')
+
+    let randomHouse = values[randomH].house
+    let randomPet = values[randomP].pet
+    let randomSpecial = values[randomS].special
+   
+    house.append(`Your house is ${randomHouse}!`)
+    pet.append(`Your pet is ${randomPet}!`)
+    special.append(`Your specialization is ${randomSpecial}`)
+
+    return
+
+    // results.textContent = `Your house is ${randomHouse}, your pet is ${randomPet} and your specialty is ${randomSpecial}!`
+
 })
