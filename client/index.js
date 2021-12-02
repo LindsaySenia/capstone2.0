@@ -1,13 +1,12 @@
 const loginForm = document.getElementById('login-form')
 const display = document.getElementById('display')
+const hidden = document.getElementById('hidden')
 const registerForm = document.getElementById('register-form')
 
 
 function clearDisplay() {
     display.innerHTML = ''
 }
-
-// 
 
 registerForm.addEventListener('submit', e => {
     e.preventDefault()
@@ -73,12 +72,18 @@ loginForm.addEventListener('submit', e => {
         .then(res => {
             console.log(res.data)
 
-            const loginMsg = document.createElement('h2');
-            const links = document.createElement('p');
+            const platform = document.createElement('h2');
+            const enter = document.createElement('h4');
+            const loginMsg = document.createElement('h3');
+            const links = document.createElement('h4');
+            // enter.textContent = "Enter Here"
+            platform.innerHTML += `<img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/harry-potter-art-doc-braham.jpg" height="200"/>`
             loginMsg.textContent = `Yo ${res.data.username}! You did it! You may now proceed to your final destination.`;
-            links.innerHTML += `<a href="./sorting.html">Sorting Hat</a>`
+            links.innerHTML += `<a href="./sorting.html">Enter Here</a>`
+            hidden.append(links);
+            hidden.append(platform);
             display.append(loginMsg);
-            display.append(links);
+            // display.append(links);
           
             usernameInput.value = ''
             passwordInput.value = ''

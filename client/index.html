@@ -5,33 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capstone</title>
+    <link href="http://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='./index.css'/>
 </head>
 <body>
-    <h1>Oh hey</h1>
+    <header>
+        <h1>King's Cross Train Station</h1>
+        <h5>Please have your ticket ready</h5>
+    </header>
+<div> 
 <main>
-    <h2>Please sign up or login!</h2>
+    
     <br>
-    <section id='forms'>
-    <form id='login-form'>
-        <input class='name' id='user-login' placeholder="Username"/>
-        <input class='password' id='pw-login' type='password' placeholder='Password'/>
-        <button id='login-btn' type='submit'>Log In</button>
-    </form>
-    <br>
-    <form id='register-form'>
-        <input class='name' id='first' placeholder="First Name"/>
-        <input class='name' id='last' placeholder='Last Name'/>
-        <input class='address' id='email' placeholder='Email Address'/>
-        <input class='name' id='user-register' placeholder='Username'/>
-        <input class='password' id='pw-register' type='password' placeholder='Password'/>
-        <button id='register-btn' type='submit'>Sign up</button>
-    </form>
+    <section class='platform'>
+        <h2 class='platform-header'>Platform 9</h2>
+        <div class='form-wrapper'>
+        <form class='form' id='login-form'>
+            <div class="input-wrapper">
+                <input class='name' id='user-login' placeholder="Username"/>
+            </div>
+            <div class="input-wrapper">
+                <input class='password' id='pw-login' type='password' placeholder='Password'/>
+            </div>
+            <div class="button-wrapper">
+                <button id='login-btn' type='submit'>Log In</button>
+            </div>
+            </form>
+        </div>
     </section>
-    <section id='display'>
+    <section class='platform-hidden'>
+       <span id='hidden'>This is HERE</span>
+    <br>
+        
+    </section>
+    <section class='platform'>
+        <h2 class='platform-header'>Platform 10</h2>
+        <div class='form-wrapper'>
+        <form class='form' id='register-form'>
+            <div class="input-wrapper">
+                <input class='name' id='first' placeholder="First Name"/>
+            </div>
+            <div class="input-wrapper">
+                <input class='name' id='last' placeholder='Last Name'/>
+            </div>
+            <div class="input-wrapper">
+                <input class='address' id='email' placeholder='Email Address'/>
+            </div>
+            <div class="input-wrapper">
+                <input class='name' id='user-register' placeholder='Username'/>
+            </div>
+            <div class="input-wrapper">
+                <input class='password' id='pw-register' type='password' placeholder='Password'/>
+            </div>
+            <div class="button-wrapper">
+                <button id='register-btn' type='submit'>Sign up</button>
+            </div>
+        
+        </form>
+    </div>
 
     </section>
-</main>
+
+   
+    
+</main></div>
+
+<footer>
+    
+    <span id='display'></span>
+</footer>
+
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src='./index.js'></script>
 </body>
