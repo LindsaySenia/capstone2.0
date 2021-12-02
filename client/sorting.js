@@ -84,21 +84,31 @@ sortingBtn.addEventListener('click', e => {
     
 
 
-    let house = document.getElementById('house')
-    let pet = document.getElementById('pet')
-    let special = document.getElementById('special')
+    let house = document.createElement('li')
+    // house.id = 'house'
+    let pet = document.createElement('li')
+    // pet.id = 'pet'
+    let special = document.createElement('li')
+    // special.id = 'special'
 
     let randomHouse = values[randomH].house
     let randomPet = values[randomP].pet
     let randomSpecial = values[randomS].special
    
-    house.innerHTML = ''
-    pet.innerHTML = ''
-    special.innerHTML = ''
+    // house.innerHTML = ''
+    // pet.innerHTML = ''
+    // special.innerHTML = ''
+    results.innerHTML = ''
+  
+    house.textContent = `Your house is ${randomHouse}!`
+    pet.textContent = `Your pet is ${randomPet}!`
+    special.textContent = `Your specialization is ${randomSpecial}`
 
-    house.append(`Your house is ${randomHouse}!`)
-    pet.append(`Your pet is ${randomPet}!`)
-    special.append(`Your specialization is ${randomSpecial}`)
+    results.append(house);
+    results.append(pet);
+    results.append(special);
+
+
 
     // sortingBtn.addEventListener('click', e => {
     //   alert('You can only get one result per ')

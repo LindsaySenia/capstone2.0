@@ -88,7 +88,7 @@ h5 {
 
 header,
 .platform-header {
-    -webkit-text-fill-color: rgb(213,202,170); /* Will override color (regardless of order) */
+    -webkit-text-fill-color: rgb(100,52,39); /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
 }
@@ -169,3 +169,25 @@ section {
     width: 500px;
 }
 
+#results-wrapper {
+    background: rgb(213,202,170);
+    padding: 10px;
+    margin: 10px;
+   
+}
+
+#sh-header {
+    font-family: 'Harry Potter', sans-serif;
+    padding: 20px;
+    margin: 20px;
+
+}
+
+.log-out {
+    background: rgb(213,202,170);
+        position: absolute;
+        right: 0px;
+        width: 100px;
+        height: 40px;
+        padding-top: 10px;
+}
