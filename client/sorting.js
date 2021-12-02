@@ -2,27 +2,27 @@
 let values = [
     {
       "id": 1,
-      "house": "G",
+      "house": "Gryffindor",
       "pet": "Owl",
-      "special": "JS"
+      "special": "React"
     },
     {
       "id": 2,
-      "house": "H",
+      "house": "Hufflepuff",
       "pet": "Rabbit",
-      "special": "QA"
+      "special": "JavaScript"
     },
     {
       "id": 2,
-      "house": "R",
+      "house": "Ravenclaw",
       "pet": "Frog",
       "special": "Java"
     },
     {
       "id": 4,
-      "house": "S",
+      "house": "Slytherin",
       "pet": "Snake",
-      "special": "Data"
+      "special": "Python"
     },
     {
       "id": 5,
@@ -34,7 +34,7 @@ let values = [
       "id": 6,
       "house": "Slytherin",
       "pet": "Cat",
-      "special": "JavaScript"
+      "special": "Web Development"
     },
     {
       "id": 7,
@@ -46,7 +46,7 @@ let values = [
       "id": 8,
       "house": "Hufflepuff",
       "pet": "Puppy",
-      "special": "Java Java"
+      "special": "Software Engineer"
     }
   ]
 
