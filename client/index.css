@@ -77,7 +77,7 @@ h5{
 }
 
 h4 {
-    font-family: 'Harry Potter', sans-serif;
+    /* font-family: 'Harry Potter', sans-serif; */
     font-size: 50px;
     font-variant: small-caps;
     text-align: center;
@@ -224,7 +224,7 @@ input {
 }
 
 #sh-header {
-    font-family: 'Harry Potter', sans-serif;
+    /* font-family: 'Harry Potter', sans-serif; */
     padding: 20px;
     margin: 20px;
 
