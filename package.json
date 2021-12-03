@@ -1,17 +1,16 @@
 {
-  "name": "project",
+  "name": "sorting_hat",
   "version": "1.0.0",
-  "description": "",
+  "description": "A website where you can create an account, login and be sorted into a Hogwarts house and specialization",
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Lindsay Senia",
   "license": "ISC",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1"
