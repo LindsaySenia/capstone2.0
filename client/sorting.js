@@ -1,4 +1,4 @@
-
+// create an array of objects with key value pairs related to my randomizer
 let values = [
     {
       "id": 1,
@@ -50,71 +50,40 @@ let values = [
     }
   ]
 
+  //get button and results container from the DOM
 const sortingBtn = document.getElementById('hat');
 let results = document.getElementById('results-container');
 
-
-//number between 1 and 4
-
-
-
-
-
-
-
-// function randomResults() {
-
-//   let randomHouse = values[randomH].house
-//   let randomPet = values[randomP].pet
-//   let randomSpecial = values[randomS].special
-
-//   console.log(`Your house is ${randomHouse}, your pet is ${randomPet} and your specialty is ${randomSpecial}!`)
-
-// }
-
-
-
-
-
+//create sorting hat click event listener
 sortingBtn.addEventListener('click', e => {
     e.preventDefault();
+
+    //logic
     let randomP = Math.floor(Math.random() * 8);
     let randomS = Math.floor(Math.random() * 8);
     let randomH = Math.floor(Math.random() * 8);
     
-
-
+    //create elements in the DOM
     let house = document.createElement('li')
-    // house.id = 'house'
     let pet = document.createElement('li')
-    // pet.id = 'pet'
     let special = document.createElement('li')
-    // special.id = 'special'
 
+    //set values for elements
     let randomHouse = values[randomH].house
     let randomPet = values[randomP].pet
     let randomSpecial = values[randomS].special
    
-    // house.innerHTML = ''
-    // pet.innerHTML = ''
-    // special.innerHTML = ''
+    //make sure the results container is empty
     results.innerHTML = ''
-  
+
+    //set text content for new elements, with a sentence and template literal
     house.textContent = `Your house is ${randomHouse}!`
     pet.textContent = `Your pet is ${randomPet}!`
     special.textContent = `Your specialization is ${randomSpecial}`
 
+    //add new elements to the results container
     results.append(house);
     results.append(pet);
     results.append(special);
-
-
-
-    // sortingBtn.addEventListener('click', e => {
-    //   alert('You can only get one result per ')
-    // })
-
-    // results.textContent = `Your house is ${randomHouse}, your pet is ${randomPet} and your specialty is ${randomSpecial}!`
-
-})
+});
 

@@ -6,6 +6,7 @@ const registerForm = document.getElementById('register-form')
 
 function clearDisplay() {
     display.innerHTML = ''
+    hidden.innerHTML = ''
 }
 
 registerForm.addEventListener('submit', e => {
@@ -77,9 +78,9 @@ loginForm.addEventListener('submit', e => {
             const loginMsg = document.createElement('h3');
             const links = document.createElement('h4');
             // enter.textContent = "Enter Here"
-            platform.innerHTML += `<img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/harry-potter-art-doc-braham.jpg" height="200"/>`
-            loginMsg.textContent = `Yo ${res.data.username}! You did it! You may now proceed to your final destination.`;
-            links.innerHTML += `<a href="./sorting.html">Enter Here</a>`
+            // platform.innerHTML += ``
+            loginMsg.textContent = `Welcome, ${res.data.username}! Please proceed ahead to Platform 9 3/4 and board the Hogwart's Express!`;
+            links.innerHTML += `<a href="./sorting.html"><img src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/harry-potter-art-doc-braham.jpg" height="200"/></a>`
             hidden.append(links);
             hidden.append(platform);
             display.append(loginMsg);

@@ -10,14 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='./index.css'/>
 </head>
-<body id='home-page'>
+<body>
     <header>
         <h1>King's Cross</h1>
         <h1>Train Station</h1>
         <h5>Please have your ticket ready</h5>
     </header>
 <div> 
-<main>
+<main id='home-page'>
     
     <br>
     <section class='platform'>
@@ -37,7 +37,11 @@
         </div>
     </section>
     <section class='platform-hidden'>
-       <span id='hidden'></span>
+       <span class="tooltip" id='hidden'>
+           <span class="tooltip-content">
+               Click to Enter
+           </span>
+       </span>
     </section>
     <section class='platform'>
         <h2 class='platform-header'>Platform 10</h2>
